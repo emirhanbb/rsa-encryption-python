@@ -1,4 +1,4 @@
-# rsa-encryption-python
+# RSA Algorithm Python
 rsa encryption algorithm with python
 How it works
 The RSA algorithm ensures that the keys, in the above illustration, are as secure as possible. The following steps highlight how it works:
