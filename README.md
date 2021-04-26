@@ -1,28 +1,11 @@
 # RSA Algorithm Python
 rsa encryption algorithm with python
-How it works
-The RSA algorithm ensures that the keys, in the above illustration, are as secure as possible. The following steps highlight how it works:
+RSA logic is based on the fact that it is more difficult to factorize an integer than to multiply it by new numbers. A base value consisting of multiplying two prime numbers that are large enough and different from each other is obtained. And other key parameters are also derived from the same two primes. Therefore, if the base value is factorized, the private key is compromised. Therefore, if we double or triple the key size, the encryption power increases exponentially (2).
 
-1. Generating the keys
-Select two large prime numbers, xx and yy. The prime numbers need to be large so that they will be difficult for someone to figure out.
-Calculate n = x * yn=x∗y.
-Calculate the totient function; \phi(n) = (x-1)(y-1)ϕ(n)=(x−1)(y−1).
-Select an integer ee, such that ee is co-prime to \phi(n)ϕ(n) and 1 < e < \phi(n)1<e<ϕ(n). The pair of numbers (n,e)(n,e) makes up the public key.
-Note: Two integers are co-prime if the only positive integer that divides them is 1.
+His work is as follows,
 
-Calculate dd such that e.d = 1e.d=1 modmod \phi(n)ϕ(n).
-dd can be found using the extended euclidean algorithm. The pair (n,d)(n,d) makes up the private key.
-
-2. Encryption
-Given a plaintext PP, represented as a number, the ciphertext CC is calculated as:
-
-C = P^{e}C=P
-​e
-​​  modmod nn.
-
-3. Decryption
-Using the private key (n,d)(n,d), the plaintext can be found using:
-
-P = C^{d}P=C
-​d
-​​  modmod nn.
+Two prime numbers are selected. It is important for security that these numbers are large. Let's call these two numbers p and q.
+For Keys, the base value must be calculated. If we say N to the base value, this value can be calculated as n = p*q.
+the totient function is calculated for the value n. Since both factors are prime, the totient function of N exists as φ(n) = (p-1)(q-1).
+If we call our Public key value e, a prime number must be selected from the range 1< e <φ(N) to find E. our E value is now our public key value.
+If we say D to our Private key value, the value d is calculated as d*e = 1 mod (n).
